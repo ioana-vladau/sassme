@@ -1,0 +1,48 @@
+@import "css-reset";
+@import "variables";
+
+body{
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $main-color;
+}
+
+ul {
+    list-style-type: none;
+    li{
+        margin: 0;
+        display: inline;
+        a{
+            text-decoration: none;
+            color: $main-color;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main{
+    width: $width;
+    margin: 0 auto;
+    background-color: lighten($main-color, 10%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spacing;
+    padding: $spacing;
+}
+
+div, footer, .myContainers{
+    background-color: $background-color;
+    padding: $spacing/2;
+}
+
+.myContainers{
+    color: #000;
+    //simple black, no use for variable declaration
+}
+
+footer{
+    padding: $spacing*2;
+    margin-top: $spacing*2;
+}
